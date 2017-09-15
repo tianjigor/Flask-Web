@@ -21,9 +21,9 @@ moment = Moment()
 db = SQLAlchemy()
 mail = Mail()
 
-login_manage = LoginManager()
-login_manage.session_protection = 'strong'
-login_manage.login_view = 'auth.login'
+login_manager = LoginManager()
+login_manager.session_protection = 'strong'
+login_manager.login_view = 'auth.login'
 
 def create_app(config_name):
     app = Flask(__name__)
@@ -34,7 +34,7 @@ def create_app(config_name):
     mail.init_app(app)
     moment.init_app(app)
     db.init_app(app)
-    login_manage.init_app(app)
+    login_manager.init_app(app)
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
