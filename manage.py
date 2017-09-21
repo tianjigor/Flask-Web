@@ -35,7 +35,7 @@ def test(coverage=False):
     if COV:
         COV.stop()
         COV.save()
-        print ('Coverage Summary')
+        print('Coverage Summary:')
         COV.report()
         basedir = os.path.abspath(os.path.dirname(__file__))
         covdir = os.path.join(basedir, 'tmp/coverage')
