@@ -56,7 +56,6 @@ def confirm(token):
 
 @auth.before_app_request
 def before_request():
-    print ('before auth')
     if current_user.is_authenticated:
         current_user.ping()
         if not current_user.confirmed \

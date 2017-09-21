@@ -41,13 +41,10 @@ def index():
     show_followed = False
     if current_user.is_authenticated:
         show_followed = bool(request.cookies.get('show_followed', ''))
-        print ('bool')
     if show_followed:
         query = current_user.followed_posts
-        print ('follow')
     else:
         query = Post.query
-        print ('all')
     page = request.args.get('page', 1, type=int)
     pagination = query.order_by(Post.timestamp.desc()).paginate(
         page, per_page=current_app.config['FLASKY_POSTS_PER_PAGE'],

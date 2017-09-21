@@ -1,6 +1,0 @@
-cd E:\Flask\flask web development\venv\Scripts
-cd E:\Flask\flask web development\flasky
-egzevtmnofsdbdci
-set MAIL_USERNAME=541878782@qq.com
-set MAIL_PASSWORD=egzevtmnofsdbdci
-set FLASK_ADMIN=541878782@qq.com
